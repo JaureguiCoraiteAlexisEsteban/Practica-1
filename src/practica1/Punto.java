@@ -23,6 +23,8 @@ public class Punto {
         double theta = Math.atan2(y, x);  // Ángulo en radianes
         return new double[]{r, theta};
     }
+    public double getX() { return x; }
+    public double getY() { return y; }
     @Override
     public String toString() {
         DecimalFormat df = new DecimalFormat("#.##");

@@ -15,12 +15,20 @@ public class Practica1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Punto p = new Punto(3, 4);
-        double[] cartesianas = p.coordCartesianas();
+        Punto p1 = new Punto(2, 3);
+        Punto p2 = new Punto(6, 7);
+        double[] cartesianas = p1.coordCartesianas();
         System.out.println("Coordenadas Cartesianas: ("+ cartesianas[0] + ", " + cartesianas[1] + ")");
-        double[] polares = p.coordPolares();
+        double[] polares = p1.coordPolares();
         System.out.println("Coordenadas Polares: (r=" + polares[0] + ", 0=" + polares[1] + " rad)");
-        System.out.println("Representacion de texto: " + p);
+        System.out.println("Representacion de texto: " + p1);
+        Linea l = new Linea(p1, p2);
+        System.out.println(l);
+        l.dibujaLinea();
+        Punto centro = new Punto(4, 5);
+        Circulo circulo = new Circulo(centro, 3);
+        System.out.println(circulo);
+        circulo.dibujaCirculo();
     }
     
 }
